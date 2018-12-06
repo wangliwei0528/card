@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/authorization/authorization",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/customized/customized",
+    "pages/share/share",
+    "pages/cutFace/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff685d",
+    "navigationBarTextStyle": "black"
+  }
+}

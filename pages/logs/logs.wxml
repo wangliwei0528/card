@@ -1,0 +1,159 @@
+<view class='all'>
+  <view class='business'>
+    <label style='flex:1'></label>
+    <label class='business_left'>名片</label>
+    <label class='business_right' bindtap="show">修改资料</label>
+  </view>
+
+  <view class='top'>
+    <image src='{{avatarUrl}}' bindtap='image' mode='widthFix'></image>
+
+    <view class='top1'>
+      <view>
+        <span>{{data.nickname}}</span>
+        <span class='border'>|</span>
+        <span class='phone'>{{data.mobile}}</span>
+
+        <view class='top1_11'>{{data.post}}</view>
+        <view class='top1_12'>{{merchants.title}}</view>
+        <view class='top1_13'>{{data.describe}}</view>
+        <button bindtap="show1">分享名片</button>
+      </view>
+    </view>
+    <view class='pos_abs' hidden="{{mask}}">
+      <view class='posabs'>
+        <view class='pos_abs1_1'>
+          <view class='pos_abs1'>
+            <button open-type="share">
+              <image src='../../img/wx_login.png' mode='widthFix' />
+              <view>分享给好友</view>
+            </button>
+          </view>
+          <view class='pos_abs1'>
+            <button bindtap='friend'>
+              <image src='../../img/wx_login.png' mode='widthFix' />
+              <view>发朋友圈</view>
+            </button>
+          </view>
+        </view>
+        <view class='pos_abs2' bindtap="hide1">取消</view>
+      </view>
+      <view class='posabs1' hidden="{{mask1}}">
+        <view class='delete' bindtap="delete1">×</view>
+        <image src='{{imgUrl}}'/>
+        <button bindtap='preservation'>保存至相册</button>
+        <view class='share'>分享朋友圈时可在相册选取图片</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='center'>
+    <view class='title'>
+
+      /
+      <span>详细信息</span> /
+    </view>
+
+    <view>
+      <view class='phone1'>
+        <view>电话：</view>
+        <label>{{data.mobile}} </label>
+        <span bindtap='phone'>
+          <image src='../../img/pic2.png' />
+        </span>
+      </view>
+
+      <view class='phone1' wx:if="{{data.wx}}">
+        <view>微信：</view>
+        <label>{{data.wx}}</label>
+        <span bindtap='copy' data-text="{{wechat}}">
+          <image src='../../img/pic3.png' />
+        </span>
+      </view>
+      <view class='phone1'>
+        <view>地址：</view>
+        <label>{{addres}}</label>
+        <span bindtap='address'>
+          <image src='../../img/pic4.png' />
+        </span>
+      </view>
+
+    </view>
+
+  </view>
+
+
+  <view class='center1'>
+    <view class='title'>
+      /
+      <span>产品介绍</span> /
+    </view>
+    <view class='center1_1' wx:for="{{product}}" wx:key="{{index}}">
+      <image src='{{product[index].cover}}' mode='widthFix'></image>
+      <view class='center1_2'>
+        <view style='color:#333333'>{{product[index].title}}</view>
+        <rich-text nodes="{{product[index].content}}" style='color:#666666;font-size:26rpx'></rich-text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='center2'>
+    <view class='title'>
+      /
+      <span>公司介绍</span> /
+    </view>
+
+    <view class='center1_1'>
+      <rich-text nodes="{{merchants.introduction}}" class='content'></rich-text>
+    </view>
+
+  </view>
+
+  <view class='bottom'>
+    <view>技术支持：西安墨和网络科技有限公司</view>
+    <view>Copyright 2005-2020 All Reserved</view>
+  </view>
+
+  <!-- <view class='pic7'>
+    <image src='../../img/pic7.png' mode='widthFix' bindtap='customized'  wx:if="{{tag!='1'}}"></image>
+  </view> -->
+  <view class="mask" hidden="{{flag}}">
+    <view class="mask1">
+      <view class="mask2">
+        <view class='mask2_top'>
+          <label style='flex:1'></label>
+          <label class='mask2_top_left'>修改信息</label>
+          <label class='mask2_top_right' bindtap="hide">×</label>
+        </view>
+        <view class='content1'>
+          <view class='content1_1'>
+            <span>姓名 ： </span>
+            <input type='text' bindinput="getNickname" value='{{data1.nickname}}'></input>
+          </view>
+          <view class='content1_1'>
+            <span>电话 ：</span>
+            <input type='number' maxlength='11' bindinput="getPhone" value='{{data1.mobile}}'></input>
+          </view>
+          <view class='content1_1'>
+            <span>微信 ： </span>
+            <input type='text' bindinput="getWx" value='{{data1.wx}}'></input>
+          </view>
+          <view class='content1_1'>
+            <span>职务 ：</span>
+            <input type='text' bindinput="getPost" value='{{data1.post}}'></input>
+          </view>
+          <view class='content1_2'>
+            <view>个人描述 ：</view>
+            <textarea bindinput="bindText" maxlength='50' fixed placeholder='介绍一下自己吧，让更多的人认识你~' placeholder-class='textarea1' value='{{data1.describe}}'></textarea>
+            <text>{{t_length}}/50</text>
+          </view>
+        </view>
+        <button bindtap='subumit'>确认提交</button>
+      </view>
+
+
+    </view>
+
+  </view>
+</view>

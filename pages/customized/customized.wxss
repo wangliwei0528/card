@@ -1,0 +1,111 @@
+.top {
+  background: #ff685d;
+  text-align: center;
+  color: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.img image {
+  width: 100%;
+  display: block;
+}
+
+.title {
+  text-align: center;
+  height: 120rpx;
+  line-height: 120rpx;
+  background: #f1f1f1;
+  font-size: 40rpx;
+}
+
+.title span {
+  color: #ff685d;
+  font-size: 20rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.content1 {
+  padding: 0 40rpx 80rpx 40rpx;
+}
+
+.content1_1 {
+  border-bottom: 2rpx solid #f1f1f1;
+  padding: 20rpx 0;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+content1_2 {
+  padding: 20rpx 0;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.content1 span {
+  float: left;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.content1_2 view {
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 30rpx;
+}
+
+.content1 textarea {
+  width: 94%;
+  padding: 20rpx;
+  margin-top: 30rpx;
+  background: #f1f1f1;
+  height: 180rpx;
+  font-size: 30rpx;
+  color: #b5b5b5;
+}
+
+.textarea1 {
+  font-weight: 200;
+  color: #b5b5b5;
+  font-size: 30rpx;
+}
+
+.content1 input {
+  color: #b5b5b5;
+  font-size: 30rpx;
+  margin-top: 6rpx;
+}
+
+button {
+  color: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  font-weight: 200;
+  background: radial-gradient(#ff9888 -24%, #ff685d 100%);
+}
+
+.picker {
+  font-size: 32rpx;
+  color: #b5b5b5;
+}
+
+text {
+  transform: translateY(-40rpx);
+  display: inline-block;
+  width: 94%;
+  text-align: right;
+  padding: 20rpx;
+  background: #f1f1f1;
+  font-size: 30rpx;
+  color: #b5b5b5;
+}
+.end{
+ padding:30rpx; 
+ background: #f1f1f1;
+ color:#b5b5b5;
+ text-align: center;
+ font-size: 26rpx;
+}

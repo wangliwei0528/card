@@ -1,0 +1,28 @@
+.top {
+  background: #ff685d;
+  text-align: center;
+  color: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+image{
+  width: 30%;
+}
+.img{
+  text-align: center;
+  margin: 20% 0 0 0 ;
+}
+ button {
+  color: #fff;
+  margin: 100rpx 180rpx 0 180rpx;
+  font-weight: 200;
+  background: #ff685d;
+  border-radius: 6rpx;
+  font-size: 40rpx;
+  background: radial-gradient(#ff9888 -24%, #ff685d 100%);
+}
+.content{
+  margin: 60rpx 80rpx;
+  text-align: center;
+  font-weight: 200
+}

@@ -1,0 +1,6 @@
+<view>
+  <view class='top'>名片</view>
+  <view class='img'><image src='../../img/pic9.jpg' mode='widthFix'></image></view>
+  <view class='content'>你还没有自己的名片哦，赶快创建一张属于自己的专属名片吧~</view>
+  <button bindtap='subimt'>马上创建</button> 
+</view>

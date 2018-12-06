@@ -1,0 +1,48 @@
+<view>
+  <view class='top'>名片</view>
+  <view class='img'>
+    <image src='../../img/pic8.jpg' mode='widthFix'></image>
+  </view>
+  <view class='title'>
+    <span>/</span>
+    请描述您的需求
+    <span>/</span>
+  </view>
+
+  <view class='content1'>
+    <view class='content1_1'>
+      <span>公司名称 ： </span>
+      <!-- <input type='text'  bindinput="getMerchant_id"></input> -->
+      <!-- <view wx:for="{{product}}" wx:key="{{index}}" > -->
+        <picker bindchange="bindPickerChange" value="{{index}}" range-key='title' range="{{data}}">
+          <view class="picker">
+            {{data[index]['title']}}
+          </view>
+        </picker>
+      <!-- </view> -->
+    </view>
+    <view class='content1_1'>
+      <span>申请人姓名 ：</span>
+      <input type='text' bindinput="getNickname"></input>
+    </view>
+    <view class='content1_1'>
+      <span>手机号码 ： </span>
+      <input type='number' bindinput="getPhone"></input>
+    </view>
+    <view class='content1_1'>
+      <span>微信 ： </span>
+      <input type='text' bindinput="getWx"></input>
+    </view>
+    <view class='content1_1'>
+      <span>职务 ： </span>
+      <input type='text' bindinput="getPost"></input>
+    </view>
+    <view class='content1_2'>
+      <view>个人描述 ：</view>
+      <textarea bindinput="bindText" maxlength='50' placeholder='介绍一下自己吧，让更多的人认识你~' placeholder-class='textarea1'></textarea>
+      <text>{{t_length}}/50</text>
+    </view>
+  </view>
+  <button bindtap='subimt'>提 交</button>
+  <view class='end'>企业名片定制电话 : <span bindtap="number">18681825227</span></view>
+</view>
